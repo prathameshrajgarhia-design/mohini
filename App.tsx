@@ -4,7 +4,7 @@ import { Header } from './components/Header';
 import { Hero } from './components/Hero';
 import { About } from './components/About';
 import { WhyUs } from './components/WhyUs';
-import { Expertise } from './components/Expertise';
+import { Expertise } from './components/Capabilities';
 import { Customization } from './components/Customization';
 import { FinalCTA } from './components/FinalCTA';
 import { Footer } from './components/Footer';
@@ -42,7 +42,7 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-white">
+    <div className="min-h-screen flex flex-col bg-[#FAF7F2]">
       <Header onNavigate={setCurrentPage} currentPage={currentPage} />
       <main className="flex-grow pt-16">
         {renderPage()}

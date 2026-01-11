@@ -60,7 +60,7 @@ export const Hero: React.FC = () => {
 
   return (
     // Fixed: Standard HTML5 section tag for structural layout
-    <section className="relative h-[90vh] min-h-[650px] flex items-center overflow-hidden bg-black">
+    <section className="relative h-[90vh] min-h-[650px] flex items-center overflow-hidden bg-black mb-24 md:mb-32">
       <AnimatePresence mode="wait">
         <motion.div
           key={index}
@@ -109,7 +109,7 @@ export const Hero: React.FC = () => {
           >
              {/* LEFT — description + CTA */}
             <div className="max-w-md md:mt-0.1">
-              <button className="bg-emerald-600 text-white px-10 py-4 text-[11px] font-black uppercase tracking-[0.2em] hover:bg-white hover:text-black transition-all">
+              <button className="bg-emerald-600 text-white px-10 py-4 text-[11px] font-black uppercase tracking-[0.2em] hover:bg- hover:text-black transition-all">
                 Project Consultation
               </button>
             </div>
