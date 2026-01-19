@@ -30,12 +30,13 @@ const App: React.FC = () => {
       case 'contact': return <ContactPage />;
       default: return (
         <>
-          <Hero />
+          <Hero onNavigate={setCurrentPage} />
+
           <About />
           <WhyUs />
           <Expertise />
           <Customization />
-          <FinalCTA />
+          <FinalCTA onNavigate={setCurrentPage} />
         </>
       );
     }

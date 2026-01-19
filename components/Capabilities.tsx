@@ -18,26 +18,35 @@ const expertiseItems = [
   {
     label: "Industrial Polymer Synthesis",
     detail: "Direct control over high-density polyethylene (HDPE) synthesis enables precise material properties, structural consistency, and extended service life."
+  },
+  {
+    label: "Custom Net Length",
+    detail: "Direct control over high-density polyethylene (HDPE) synthesis enables precise material properties, structural consistency, and extended service life."
+
+  },
+  {
+    label: "Custom Packing for Bulk Shipments",
+    detail: "Direct control over high-density polyethylene (HDPE) synthesis enables precise material properties, structural consistency, and extended service life."
+
   }
 ];
 
 export const Expertise: React.FC = () => {
   return (
-    <section id="expertise" className="py-16 bg-[#FAF7F2]">
+    <section id="expertise" className="bg-[#FAF7F2] text-white py-24">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div>
-            <span className="text-[14px] font-black uppercase tracking-[0.2em] text-emerald-900 mb-6 block">Capabilities</span>
-            <h3 className="text-3xl font-bold text-stone-900 mb-6 leading-tight">Precision Knitting, Engineered In-House</h3>
-            <p className="text-stone-500 mb-10 text-base font-light leading-relaxed">
-              Our manufacturing unit bridges the gap between material science and field application. From colour accuracy to tensile resilience to shade requirements.
+            <span className="text-[18px] font-black uppercase tracking-[0.1em] text-[#1C1C1C] mb-6 block">Capabilities</span>
+            <h3 className="text-4xl font-bold text-[#1C1C1C] mb-6 leading-tight">Precision Knitting, Engineered In-House</h3>
+            <p className="text-stone-600 mb-10 text-base font-light leading-relaxed">
+              Our manufacturing unit bridges the gap between material science and field application.
             </p>
             
             <div className="grid sm:grid-cols-2 gap-y-10 gap-x-12">
               {expertiseItems.map((item, idx) => (
-                <div key={idx} className="group border-l border-stone-100 pl-6 py-2 hover:border-emerald-600 transition-colors">
-                  <h4 className="font-bold text-stone-900 text-[11px] uppercase tracking-widest mb-2">{item.label}</h4>
-                  <p className="text-stone-500 text-[12px] leading-relaxed font-light tracking-[0.01em]">{item.detail}</p>
+                <div key={idx} className="group border-l border-stone-700 pl-6 py-2 hover:border-white transition-colors">
+                  <h4 className="font-bold text-[#4A4A4A] text-[11px] uppercase tracking-widest mb-2">{item.label}</h4>
                 </div>
               ))}
             </div>
@@ -46,7 +55,7 @@ export const Expertise: React.FC = () => {
           <div className="relative">
             <div className="aspect-[5/6] bg-stone-100 overflow-hidden relative">
                <img 
-                src="https://images.unsplash.com/photo-1590247813693-5541d1c609fd?auto=format&fit=crop&q=80&w=1200" 
+                src="   " 
                 alt="Industrial Inspection" 
                 className="w-full h-full object-cover grayscale opacity-90"
               />
@@ -59,6 +68,7 @@ export const Expertise: React.FC = () => {
           </div>
         </div>
       </div>
+      <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-b from-transparent to-slate-900 pointer-events-none" />
     </section>
   );
 };

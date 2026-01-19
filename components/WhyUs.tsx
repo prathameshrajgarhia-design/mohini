@@ -22,7 +22,7 @@ const reasons = [
 
 export const WhyUs: React.FC = () => {
   return (
-    <section className="py-16 pb-24 bg-[#FAF7F2]">
+    <section className="py-16 pb-24 bg-[#F2EFE8]">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid md:grid-cols-4 gap-px bg-stone-200 border border-stone-200 shadow-sm">
           {reasons.map((item, idx) => (

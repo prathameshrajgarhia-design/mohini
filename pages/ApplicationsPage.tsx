@@ -12,7 +12,7 @@ const apps = [
 export const ApplicationsPage: React.FC = () => {
   return (
     <div className="pb-32">
-      <section className="py-24 bg-stone-900 text-white">
+      <section id="applications" className="py-24 bg-stone-900 text-white">
         <div className="max-w-7xl mx-auto px-6">
           <h1 className="text-5xl md:text-7xl font-black mb-8 tracking-tighter">Real-World <br /> Resilience.</h1>
           <p className="text-stone-400 max-w-2xl text-xl font-light">Versatile shading solutions engineered for specific environmental stresses.</p>

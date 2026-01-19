@@ -7,7 +7,7 @@ export default defineConfig(({ mode }) => {
 
   return {
     // 👇 THIS is the critical line for GitHub Pages
-    base: '/mohini/',
+    base: '/',
 
     server: {
       port: 3000,

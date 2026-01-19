@@ -5,8 +5,11 @@ import { motion } from 'framer-motion';
 export const ContactPage: React.FC = () => {
   return (
     <div className="pb-32">
-      <section className="py-24 bg-stone-50">
-        <div className="max-w-7xl mx-auto px-6">
+<section
+  id="contact"
+  className="py-24 bg-stone-50 scroll-mt-24"
+>
+          <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-24">
             <div>
               <h1 className="text-6xl font-black text-stone-900 mb-8">Let's Discuss <br /> Your Scale.</h1>
@@ -17,11 +20,11 @@ export const ContactPage: React.FC = () => {
               <div className="space-y-10">
                 <div>
                   <h4 className="text-[10px] font-bold text-emerald-800 uppercase tracking-[0.3em] mb-4">Corporate Office</h4>
-                  <p className="text-stone-900 font-medium">Mohini Tradelink Manufacturing Unit <br /> Industrial Zone, Phase II <br /> Ahmedabad, Gujarat, India</p>
+                  <p className="text-stone-900 font-medium">Mohini Tradelink<br /> Phase-1, GIDC <br /> Vapi, Gujarat, India</p>
                 </div>
                 <div>
                   <h4 className="text-[10px] font-bold text-emerald-800 uppercase tracking-[0.3em] mb-4">Export Division</h4>
-                  <p className="text-stone-900 font-medium">exports@mohinitradelink.com <br /> +91 (079) 4000-0000</p>
+                  <p className="text-stone-900 font-medium">mohinitradelink@yahoo.com <br /> +91 9429117406</p>
                 </div>
               </div>
             </div>

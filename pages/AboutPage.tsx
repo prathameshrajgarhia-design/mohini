@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 export const AboutPage: React.FC = () => {
   return (
     <div className="pb-32">
-      <section className="py-24 bg-stone-50 border-b border-stone-200">
+      <section id="about" className="py-24 bg-stone-50 border-b border-stone-200">
         <div className="max-w-7xl mx-auto px-6">
           <motion.span 
             initial={{ opacity: 0 }}

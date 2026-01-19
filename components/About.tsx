@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 export const About: React.FC = () => {
   return (
-    <section id="about" className="py-16 bg-[#FAF7F2] pt-20 pb-24 overflow-hidden">
+    <section className="py-16 bg-[#FAF7F2] pt-20 pb-24 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid md:grid-cols-12 gap-12 items-start">
           <div className="md:col-span-4">

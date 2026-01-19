@@ -28,7 +28,9 @@ const productCategories = [
 export const ProductsPage: React.FC = () => {
   return (
     <div className="pb-32">
-      <section className="py-24 border-b border-stone-100">
+      <section
+        id="products"
+        className="py-24 bg-[#FAF7F2] border-b border-stone-100 scroll-mt-24">
         <div className="max-w-7xl mx-auto px-6">
           <span className="text-[10px] font-bold text-stone-400 uppercase tracking-[0.5em]">The Catalog</span>
           <h1 className="text-6xl font-black text-stone-900 mt-6 mb-12">Product Prathmesh.</h1>
