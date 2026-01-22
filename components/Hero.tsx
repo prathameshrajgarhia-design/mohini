@@ -67,12 +67,12 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
   }, [index]);
 
   return (
-    <section className="relative h-[90vh] min-h-[650px] flex items-center overflow-hidden bg-black mb-24 md:mb-32">
+    <section className="relative h-[89vh] min-h-[650px] flex items-center overflow-hidden bg-black mb-24 md:mb-32">
       <AnimatePresence mode="wait">
         <motion.div
           key={index}
           initial={{ opacity: 0, scale: 1.05 }}
-          animate={{ opacity: 0.9, scale: 1 }}
+          animate={{ opacity: 0.7, scale: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 1, ease: "easeOut" }}
           className="absolute inset-0 z-0"
@@ -82,7 +82,7 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
             alt={slides[index].title}
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 pointer-events-none" />
+          <div className="absolute inset-0 bg-gradient-to-r from-stone-900/40 via-stone-900/10 to-transparent" />
         </motion.div>
       </AnimatePresence>
 
