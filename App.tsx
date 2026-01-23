@@ -1,4 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
+import { Routes, Route, useLocation } from "react-router-dom";
+
 import Header from "./components/Header";
 import { Hero } from "./components/Hero";
 import { About } from "./components/About";
@@ -13,47 +15,46 @@ import { ApplicationsPage } from "./pages/ApplicationsPage";
 import { ProductsPage } from "./pages/ProductsPage";
 import { ContactPage } from "./pages/ContactPage";
 
-const App: React.FC = () => {
-  const [currentPage, setCurrentPage] = useState("home");
-
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, [currentPage]);
+  }, [pathname]);
+  return null;
+};
 
-  const renderPage = () => {
-    switch (currentPage) {
-      case "about":
-        return <AboutPage />;
-      case "applications":
-        return <ApplicationsPage />;
-      case "products":
-        return <ProductsPage />;
-      case "contact":
-        return <ContactPage />;
-      default:
-        return (
-          <>
-            <Hero onNavigate={setCurrentPage} />
-            <About />
-            <WhyUs />
-            <Expertise />
-            <Customization />
-            <FinalCTA onNavigate={setCurrentPage} />
-          </>
-        );
-    }
-  };
-
+const App: React.FC = () => {
   return (
     <div className="min-h-screen flex flex-col bg-[#FAF7F2]">
-      <Header onNavigate={setCurrentPage} activeSection={currentPage} />
+      <Header />
 
-      {/* HEADER HEIGHT OFFSET — MATCHES h-24 */}
+      {/* Header is fixed, so content starts naturally below */}
       <main className="flex-grow">
-        {renderPage()}
+        <ScrollToTop />
+
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                <Hero />
+                <About />
+                <WhyUs />
+                <Expertise />
+                <Customization />
+                <FinalCTA />
+              </>
+            }
+          />
+
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/applications" element={<ApplicationsPage />} />
+          <Route path="/products" element={<ProductsPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+        </Routes>
       </main>
 
-      <Footer onNavigate={setCurrentPage} />
+      <Footer />
     </div>
   );
 };
