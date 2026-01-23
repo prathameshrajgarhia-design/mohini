@@ -49,7 +49,7 @@ const App: React.FC = () => {
       <Header onNavigate={setCurrentPage} activeSection={currentPage} />
 
       {/* HEADER HEIGHT OFFSET — MATCHES h-24 */}
-      <main className="flex-grow pt-20">
+      <main className="flex-grow">
         {renderPage()}
       </main>
 

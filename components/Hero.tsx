@@ -64,10 +64,16 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
     }, 6000);
 
     return () => clearInterval(timer);
-  }, [index]);
+  }, []);
 
   return (
-    <section className="relative h-[89vh] min-h-[650px] flex items-center overflow-hidden bg-black mb-24 md:mb-32">
+<section
+  className="relative flex items-center overflow-hidden bg-black"
+  style={{
+    marginTop: "80px",
+    height: "calc(100vh - 80px)",
+  }}
+>      
       <AnimatePresence mode="wait">
         <motion.div
           key={index}
